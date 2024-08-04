@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const isLoading = true
+const isLoading = false
 </script>
 
 <template>
