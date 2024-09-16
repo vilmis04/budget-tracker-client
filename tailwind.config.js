@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         "app-color-danger": "#ef4444",
-        "app-color-background": "#16653",
+        "app-color-background": "#042f2e",
       },
     },
   },
