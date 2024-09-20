@@ -5,6 +5,9 @@ export enum Locale {
   LT = "lt",
 }
 
+export const isLocale = (value: string): value is Locale =>
+  Object.values<string>(Locale).includes(value);
+
 type LocaleContext = {
   locale: Locale;
   setLocale: (locale: Locale) => void;

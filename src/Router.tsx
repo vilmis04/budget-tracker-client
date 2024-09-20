@@ -1,11 +1,8 @@
-import { FormattedMessage } from "react-intl";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Locale, useLocaleContext } from "./localeContext/localeContext";
 import { Layout } from "./components/Layout";
+import { Dashboard } from "./views/Dashboard";
 
 export const Router = () => {
-  const { locale, setLocale } = useLocaleContext();
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -13,19 +10,7 @@ export const Router = () => {
       children: [
         {
           index: true,
-          element: (
-            <div>
-              <FormattedMessage id="general.hello" />
-              <button
-                className="block bg-app-color-danger"
-                onClick={() =>
-                  setLocale(locale === Locale.EN ? Locale.LT : Locale.EN)
-                }
-              >
-                {"en <-> lt"}
-              </button>
-            </div>
-          ),
+          element: <Dashboard />,
         },
       ],
     },
